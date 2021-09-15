@@ -1,15 +1,44 @@
-<ion-header >
-  <ion-toolbar color="primary" class="ion-padding">
-    <ion-title><h1>Registrapp</h1></ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-logheader></app-logheader>
 
 <ion-content>
+  <div class="ion-padding" >
+    <ion-grid fixed class="ion-padding-top">
+      <ion-row>
+        <ion-col size="2"></ion-col>
+        <ion-col size="8" class="ion-padding">
+          <form #LogForm="ngForm" (ngSubmit)="onSubmit(LogForm)" >
+            <ion-title class="ion-padding-top">{{LogForm.valid}}</ion-title>
+            <ion-item class="ion-padding-top">
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input type="text" required [(ngModel)]="user" name="loguser"></ion-input>
+            </ion-item>
+            <ion-item class="ion-padding-top">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="password" required name="logpass" ></ion-input>
+              
+            </ion-item>
+            <ion-text color="primary" routerLink="../passrecover">
+              <p>¿Olvidaste tu Contraseña?</p>
+            </ion-text>
+            <div class="ion-padding-top">
+              <ion-button  type="submit" expand="block" [disabled]="LogForm.invalid">
+                Iniciar Sesion
+              </ion-button>
+            </div>
+            
+          
+          
+          
+          
+          </form>
+        </ion-col>
+        <ion-col size="2"></ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
 
+  
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-img src="../assets/images/Logo-duoc.jpg" slot="end"></ion-img>
-  </ion-toolbar>
-</ion-footer>
+<app-mainfooter></app-mainfooter>

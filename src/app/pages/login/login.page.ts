@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -11,5 +12,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  user:string;
+  password:string
+  async onSubmit(form){
+    
 
+  }
 }
