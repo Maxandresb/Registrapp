@@ -11,7 +11,17 @@
     </ion-header>
     <ion-content>
     <ion-menu-toggle>
-      <ion-list  >
+      <ion-list lines="full" *ngFor="let item of items" >
+
+        <ion-item [routerLink]="item.path" detail>
+          {{item.text}}
+          <ion-icon slot="start" [name]="item.icon"></ion-icon>
+        </ion-item>
+
+        
+
+      </ion-list>
+      <!-- <ion-list  >
 
         
 
@@ -36,11 +46,23 @@
           <ion-icon slot="start" name="alert-circle"></ion-icon>
         </ion-item>
 
-      </ion-list>
+      </ion-list> -->
     </ion-menu-toggle>
 
     </ion-content>
-  </ion-menu>
+    <ion-menu-toggle>
+    <ion-footer>
+      <ion-toolbar>
+        
+        <ion-item routerLink="login" lines="none">
+          Cerrar Sesion
+          <ion-icon slot="start" name="power"></ion-icon>
+        </ion-item>
+      
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu-toggle>
+  </ion-menu> 
 
 
 

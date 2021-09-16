@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PassrecoverPageRoutingModule } from './passrecover-routing.module';
 
 import { PassrecoverPage } from './passrecover.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PassrecoverPageRoutingModule
+    PassrecoverPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [PassrecoverPage]
 })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Itemsmenu } from './interfaces/itemsmenu';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  items:Itemsmenu[]=[{
+    path:'home',
+    text:'Inicio',
+    icon:'home'
+  },
+  
+]
   constructor() {}
 }
